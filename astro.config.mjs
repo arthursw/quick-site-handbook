@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://quick-site-handbook.pages.dev/',
+	site: 'https://quick-site-handbook.pages.dev',
 	base: '/quick-site-handbook',
 	integrations: [
 		starlight({
