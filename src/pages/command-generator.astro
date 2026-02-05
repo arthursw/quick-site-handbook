@@ -1,0 +1,472 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+const title = 'Command Generator';
+const description = 'Generate custom commands to create your Hugo website';
+---
+
+<StarlightPage frontmatter={{ title, description }}>
+  <style>
+    .command-generator {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 2px solid var(--sl-color-gray-5);
+      margin-bottom: 1rem;
+    }
+    
+    .tab {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--sl-color-gray-3);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: all 0.2s;
+    }
+    
+    .tab:hover {
+      color: var(--sl-color-white);
+    }
+    
+    .tab.active {
+      color: var(--sl-color-accent);
+      border-bottom-color: var(--sl-color-accent);
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .command-type-tabs {
+      display: flex;
+      gap: 0.5rem;
+      background: var(--sl-color-gray-6);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .command-type-tab {
+      flex: 1;
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--sl-color-gray-3);
+      border-radius: 0.25rem;
+      transition: all 0.2s;
+    }
+    
+    .command-type-tab:hover {
+      color: var(--sl-color-white);
+    }
+    
+    .command-type-tab.active {
+      background: var(--sl-color-accent);
+      color: var(--sl-color-black);
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+      font-weight: 600;
+      color: var(--sl-color-white);
+    }
+    
+    .form-group input {
+      padding: 0.75rem;
+      border: 1px solid var(--sl-color-gray-5);
+      border-radius: 0.375rem;
+      background: var(--sl-color-black);
+      color: var(--sl-color-white);
+      font-size: 1rem;
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--sl-color-accent);
+    }
+    
+    .form-group .help-text {
+      font-size: 0.875rem;
+      color: var(--sl-color-gray-3);
+    }
+    
+    .output-box {
+      background: var(--sl-color-gray-6);
+      border: 1px solid var(--sl-color-gray-5);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      position: relative;
+    }
+    
+    .output-box pre {
+      margin: 0;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      font-family: var(--__sl-font-mono);
+      font-size: 0.875rem;
+    }
+    
+    .copy-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--sl-color-accent);
+      color: var(--sl-color-black);
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    
+    .copy-btn:hover {
+      opacity: 0.9;
+    }
+    
+    .copy-btn.copied {
+      background: var(--sl-color-green);
+    }
+    
+    .details-box {
+      margin-top: 1.5rem;
+      border: 1px solid var(--sl-color-gray-5);
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    
+    .details-summary {
+      padding: 1rem;
+      background: var(--sl-color-gray-6);
+      cursor: pointer;
+      font-weight: 600;
+      user-select: none;
+    }
+    
+    .details-summary:hover {
+      background: var(--sl-color-gray-5);
+    }
+    
+    .details-content {
+      padding: 1rem;
+      border-top: 1px solid var(--sl-color-gray-5);
+    }
+    
+    .details-content ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+    
+    .details-content li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .help-box {
+      background: var(--sl-color-gray-6);
+      border-left: 4px solid var(--sl-color-accent);
+      padding: 1rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      margin: 1rem 0;
+    }
+    
+    .help-box h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--sl-color-accent);
+    }
+    
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    
+    .platform-item {
+      background: var(--sl-color-gray-5);
+      padding: 0.75rem;
+      border-radius: 0.375rem;
+    }
+    
+    .platform-item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--sl-color-white);
+    }
+  </style>
+
+  <div class="command-generator">
+    <!-- Platform Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="mac-linux">Mac / Linux</button>
+      <button class="tab" data-tab="windows">Windows (PowerShell)</button>
+    </div>
+
+    <!-- Command Type Tabs -->
+    <div class="command-type-tabs">
+      <button class="command-type-tab active" data-type="ultimate">Ultimate Command</button>
+      <button class="command-type-tab" data-type="install-tools">Install Tools Only</button>
+      <button class="command-type-tab" data-type="new-site">Create Site Only</button>
+    </div>
+
+    <!-- Ultimate Command Form -->
+    <div class="tab-content active" data-content="ultimate">
+      <div class="form-group">
+        <label for="site-name-ultimate">Site Name</label>
+        <input type="text" id="site-name-ultimate" placeholder="my-website" />
+        <span class="help-text">Letters, numbers, and hyphens only (no spaces)</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="theme-url-ultimate">Hugo Theme GitHub URL</label>
+        <input type="text" id="theme-url-ultimate" placeholder="https://github.com/theNewDynamic/gohugo-theme-ananke" />
+        <span class="help-text">Copy the GitHub URL from themes.gohugo.io</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="folder-path-ultimate">Folder Path</label>
+        <input type="text" id="folder-path-ultimate" placeholder="/Users/yourname/Documents/websites" />
+        <span class="help-text">Where you want the site folder created</span>
+      </div>
+
+      <div class="details-box">
+        <div class="details-summary">📋 How to copy a folder path</div>
+        <div class="details-content">
+          <div class="platform-grid">
+            <div class="platform-item">
+              <strong>Mac</strong>
+              Right-click folder → Hold Option → "Copy as Pathname"
+            </div>
+            <div class="platform-item">
+              <strong>Windows</strong>
+              Shift + Right-click folder → "Copy as path"
+            </div>
+            <div class="platform-item">
+              <strong>Linux</strong>
+              Right-click folder → Properties, or use pwd in terminal
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Install Tools Only Form -->
+    <div class="tab-content" data-content="install-tools">
+      <div class="help-box">
+        <h4>ℹ️ What this does</h4>
+        <p>This installs Pixi, Git, and Hugo globally on your system. Run this once, then use "Create Site Only" for each new website.</p>
+      </div>
+      <p>No inputs needed — just copy and run the command below.</p>
+    </div>
+
+    <!-- Create Site Only Form -->
+    <div class="tab-content" data-content="new-site">
+      <div class="help-box">
+        <h4>⚠️ Prerequisites</h4>
+        <p>You must have Git and Hugo installed first. Use "Install Tools Only" if you haven't installed them yet.</p>
+      </div>
+      
+      <div class="form-group">
+        <label for="site-name-new">Site Name</label>
+        <input type="text" id="site-name-new" placeholder="my-website" />
+        <span class="help-text">Letters, numbers, and hyphens only (no spaces)</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="theme-url-new">Hugo Theme GitHub URL</label>
+        <input type="text" id="theme-url-new" placeholder="https://github.com/theNewDynamic/gohugo-theme-ananke" />
+        <span class="help-text">Copy the GitHub URL from themes.gohugo.io</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="folder-path-new">Folder Path</label>
+        <input type="text" id="folder-path-new" placeholder="/Users/yourname/Documents/websites" />
+        <span class="help-text">Where you want the site folder created</span>
+      </div>
+    </div>
+
+    <!-- Output -->
+    <div>
+      <h3>Your Command</h3>
+      <div class="output-box">
+        <pre id="command-output">Select options above to generate your command...</pre>
+        <button class="copy-btn" id="copy-btn">Copy</button>
+      </div>
+    </div>
+
+    <!-- What it does -->
+    <div class="details-box">
+      <div class="details-summary">🔍 What does this command do?</div>
+      <div class="details-content" id="what-it-does">
+        <p>Generate a command to see what it will do.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let currentPlatform = 'mac-linux';
+    let currentType = 'ultimate';
+
+    // DOM Elements
+    const platformTabs = document.querySelectorAll('.tab');
+    const typeTabs = document.querySelectorAll('.command-type-tab');
+    const contentSections = document.querySelectorAll('[data-content]');
+    const commandOutput = document.getElementById('command-output');
+    const copyBtn = document.getElementById('copy-btn');
+    const whatItDoes = document.getElementById('what-it-does');
+
+    // Platform tab switching
+    platformTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        platformTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentPlatform = tab.dataset.tab;
+        generateCommand();
+      });
+    });
+
+    // Type tab switching
+    typeTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        typeTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentType = tab.dataset.type;
+        
+        // Show/hide content sections
+        contentSections.forEach(section => {
+          section.classList.toggle('active', section.dataset.content === currentType);
+        });
+        
+        generateCommand();
+      });
+    });
+
+    // Generate command based on current state
+    function generateCommand() {
+      let command = '';
+      let description = '';
+
+      if (currentType === 'ultimate') {
+        const siteName = document.getElementById('site-name-ultimate').value || 'my-site';
+        const themeUrl = document.getElementById('theme-url-ultimate').value || 'https://github.com/theNewDynamic/gohugo-theme-ananke.git';
+        const folderPath = document.getElementById('folder-path-ultimate').value || '/path/to/sites';
+        
+        if (currentPlatform === 'mac-linux') {
+          command = `curl -fsSL https://arthursw.github.io/quick-site-handbook/create-site.sh | bash -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
+        } else {
+          command = `irm https://arthursw.github.io/quick-site-handbook/create-site.ps1 | iex -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
+        }
+        
+        description = `
+          <p>This "Ultimate Command" will:</p>
+          <ul>
+            <li>Check if Pixi is installed (install it if not)</li>
+            <li>Create a Pixi environment in your specified folder</li>
+            <li>Install Git and Hugo in that environment</li>
+            <li>Create a new Hugo site named "${siteName}"</li>
+            <li>Add the theme from ${themeUrl}</li>
+            <li>Create a helpful README.md file</li>
+            <li>Create a .gitignore file (ignores public/, .DS_Store, etc.)</li>
+          </ul>
+          <p>After running, upload the folder to GitHub and deploy to Cloudflare Pages.</p>
+        `;
+      } else if (currentType === 'install-tools') {
+        if (currentPlatform === 'mac-linux') {
+          command = 'curl -fsSL https://arthursw.github.io/quick-site-handbook/install-tools.sh | bash';
+        } else {
+          command = 'irm https://arthursw.github.io/quick-site-handbook/install-tools.ps1 | iex';
+        }
+        
+        description = `
+          <p>This command will:</p>
+          <ul>
+            <li>Check if Pixi is installed (install it if not)</li>
+            <li>Run <code>pixi global install git</code></li>
+            <li>Run <code>pixi global install hugo</code></li>
+          </ul>
+          <p>These tools will be available system-wide. Run this once, then create unlimited sites.</p>
+        `;
+      } else if (currentType === 'new-site') {
+        const siteName = document.getElementById('site-name-new').value || 'my-site';
+        const themeUrl = document.getElementById('theme-url-new').value || 'https://github.com/theNewDynamic/gohugo-theme-ananke.git';
+        const folderPath = document.getElementById('folder-path-new').value || '/path/to/sites';
+        
+        if (currentPlatform === 'mac-linux') {
+          command = `curl -fsSL https://arthursw.github.io/quick-site-handbook/new-site.sh | bash -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
+        } else {
+          command = `irm https://arthursw.github.io/quick-site-handbook/new-site.ps1 | iex -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
+        }
+        
+        description = `
+          <p>This command assumes Git and Hugo are already installed globally. It will:</p>
+          <ul>
+            <li>Create a new Hugo site named "${siteName}" in ${folderPath}</li>
+            <li>Initialize Git with <code>git init</code></li>
+            <li>Add the theme as a Git submodule</li>
+            <li>Configure hugo.toml with the theme name</li>
+            <li>Create a README.md and .gitignore</li>
+          </ul>
+          <p><strong>Prerequisite:</strong> You must have run "Install Tools Only" first.</p>
+        `;
+      }
+
+      commandOutput.textContent = command || 'Fill in the fields above to generate your command...';
+      whatItDoes.innerHTML = description;
+    }
+
+    // Copy button
+    copyBtn.addEventListener('click', () => {
+      const text = commandOutput.textContent;
+      if (text && !text.includes('Fill in') && !text.includes('Select options')) {
+        navigator.clipboard.writeText(text).then(() => {
+          copyBtn.textContent = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(() => {
+            copyBtn.textContent = 'Copy';
+            copyBtn.classList.remove('copied');
+          }, 2000);
+        });
+      }
+    });
+
+    // Input listeners
+    ['site-name-ultimate', 'theme-url-ultimate', 'folder-path-ultimate', 'site-name-new', 'theme-url-new', 'folder-path-new'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', generateCommand);
+      }
+    });
+
+    // Initialize
+    generateCommand();
+
+    // Details toggle
+    document.querySelectorAll('.details-summary').forEach(summary => {
+      summary.addEventListener('click', () => {
+        const content = summary.nextElementSibling;
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+  </script>
+</StarlightPage>

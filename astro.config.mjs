@@ -4,21 +4,55 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://arthursw.github.io',
+	base: '/quick-site-handbook',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Quick Site Handbook',
+			logo: {
+				src: './src/assets/houston.webp',
+			},
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/arthursw/quick-site-handbook' },
+			],
+			locales: {
+				root: {
+					label: 'English',
+					lang: 'en',
+				},
+				fr: {
+					label: 'Français',
+					lang: 'fr',
+				},
+			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Quickstart',
+					translations: {
+						fr: 'Démarrage Rapide',
+					},
+					link: '/quickstart',
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Intermediate',
+					translations: {
+						fr: 'Intermédiaire',
+					},
+					link: '/intermediate',
+				},
+				{
+					label: 'Command Generator',
+					translations: {
+						fr: 'Générateur de Commandes',
+					},
+					link: '/command-generator',
+				},
+				{
+					label: 'Manual Guide',
+					translations: {
+						fr: 'Guide Manuel',
+					},
+					link: '/manual',
 				},
 			],
 		}),
