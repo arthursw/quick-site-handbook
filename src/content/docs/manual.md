@@ -267,7 +267,7 @@ You can use your own domain name:
 
 ## Recommended Learning Path
 
-1. **Get a site online first** — Follow the [Quickstart](/quick-site-handbook/quickstart)
+1. **Get a site online first** — Follow the [Quickstart](/quickstart)
 2. **Understand Git** — Learn the basics of version control
 3. **Learn Markdown** — Essential for writing content
 4. **Explore Hugo** — Understand themes and configuration

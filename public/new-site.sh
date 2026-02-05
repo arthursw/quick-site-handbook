@@ -59,13 +59,13 @@ echo "🔍 Checking prerequisites..."
 
 if ! command -v git &> /dev/null; then
     echo "❌ Git is not installed. Please run the install-tools.sh script first."
-    echo "   Visit: https://quick-site-handbook.pages.dev/quick-site-handbook/command-generator"
+    echo "   Visit: https://quick-site-handbook.pages.dev/command-generator"
     exit 1
 fi
 
 if ! command -v hugo &> /dev/null; then
     echo "❌ Hugo is not installed. Please run the install-tools.sh script first."
-    echo "   Visit: https://quick-site-handbook.pages.dev/quick-site-handbook/command-generator"
+    echo "   Visit: https://quick-site-handbook.pages.dev/command-generator"
     exit 1
 fi
 
@@ -229,5 +229,5 @@ echo ""
 echo "To deploy:"
 echo "   1. Upload to GitHub using GitHub Desktop"
 echo "   2. Deploy to Cloudflare Pages"
-echo "   See: https://quick-site-handbook.pages.dev/quick-site-handbook/quickstart"
+echo "   See: https://quick-site-handbook.pages.dev/quickstart"
 echo ""

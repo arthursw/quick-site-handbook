@@ -267,7 +267,7 @@ Vous pouvez utiliser votre propre nom de domaine :
 
 ## Parcours d'Apprentissage Recommandé
 
-1. **Mettez d'abord un site en ligne** — Suivez le [Démarrage Rapide](/quick-site-handbook/fr/quickstart)
+1. **Mettez d'abord un site en ligne** — Suivez le [Démarrage Rapide](/fr/quickstart)
 2. **Comprenez Git** — Apprenez les bases du contrôle de version
 3. **Apprenez le Markdown** — Essentiel pour écrire du contenu
 4. **Explorez Hugo** — Comprenez les thèmes et la configuration

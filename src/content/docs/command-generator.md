@@ -6,7 +6,7 @@ description: Generate custom commands to create your Hugo website.
 The Command Generator is a web tool that creates the exact command you need to run in your terminal or PowerShell.
 
 :::tip[Open the Generator]
-👉 [**Open Command Generator**](/quick-site-handbook/command-generator)
+👉 [**Open Command Generator**](/command-generator)
 :::
 
 ---
@@ -37,7 +37,7 @@ This single command will:
 
 ### 2. Install Tools Only
 
-**Best for**: Users following the [Intermediate Guide](/quick-site-handbook/intermediate).
+**Best for**: Users following the [Intermediate Guide](/intermediate).
 
 Installs Pixi, Git, and Hugo globally so you can create multiple sites.
 
@@ -104,7 +104,7 @@ Make sure to select the correct tab before copying!
 Once your site is created:
 
 1. **Upload to GitHub** using [GitHub Desktop](https://desktop.github.com/)
-2. **Deploy to Cloudflare** following the [Quickstart guide](/quick-site-handbook/quickstart#step-5-deploy-on-cloudflare-pages)
+2. **Deploy to Cloudflare** following the [Quickstart guide](/quickstart#step-5-deploy-on-cloudflare-pages)
 3. **Edit your content** using GitHub's online editor or VS Code
 
 ---
@@ -135,4 +135,4 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## Security Note
 
-These scripts download and execute code from this website. Always review scripts before running them if you're unsure. The scripts are open source and available in our [GitHub repository](https://github.com/arthursw/quick-site-handbook/tree/main/public).
+These scripts download and execute code from this website. Always review scripts before running them if you're unsure. The scripts are open source and available in our [GitHub repository](https://github.com/arthursw/tree/main/public).

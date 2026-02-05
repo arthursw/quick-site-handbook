@@ -38,7 +38,7 @@ Avant de commencer, vous avez besoin de deux comptes gratuits :
 
 ## Étape 2 : Obtenir Votre Commande
 
-Allez sur la page [**Générateur de Commandes**](/quick-site-handbook/fr/command-generator) pour créer votre commande d'installation personnalisée.
+Allez sur la page [**Générateur de Commandes**](/command-generator) pour créer votre commande d'installation personnalisée.
 
 Vous devrez fournir :
 - **Nom du site** : Un nom pour votre site web (pas d'espaces, minuscules recommandées)
@@ -193,11 +193,11 @@ Vous maîtrisez les bases ! Voici ce que vous pouvez explorer ensuite :
 
 ### Si vous voulez créer plus de sites...
 
-Consultez le [**Guide Intermédiaire**](/quick-site-handbook/fr/intermediate) — il installe les outils globalement pour que vous puissiez créer des sites illimités sans tout réinstaller.
+Consultez le [**Guide Intermédiaire**](/fr/intermediate) — il installe les outils globalement pour que vous puissiez créer des sites illimités sans tout réinstaller.
 
 ### Si vous voulez comprendre comment tout fonctionne...
 
-Visitez le [**Guide Manuel**](/quick-site-handbook/fr/manual) pour des ressources sur :
+Visitez le [**Guide Manuel**](/fr/manual) pour des ressources sur :
 - Comment fonctionnent les sites web statiques
 - Les bases de la ligne de commande
 - Les fondamentaux de Git
@@ -217,7 +217,7 @@ Visitez le [**Guide Manuel**](/quick-site-handbook/fr/manual) pour des ressource
 
 Si quelque chose n'a pas fonctionné :
 
-1. Consultez le [**Guide Manuel**](/quick-site-handbook/fr/manual) pour des explications détaillées
+1. Consultez le [**Guide Manuel**](/fr/manual) pour des explications détaillées
 2. Recherchez votre message d'erreur en ligne
 3. Consultez la [documentation Hugo](https://gohugo.io/documentation/)
 4. Demandez sur le [forum communautaire Hugo](https://discourse.gohugo.io/)

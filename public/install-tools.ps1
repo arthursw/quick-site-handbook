@@ -81,7 +81,7 @@ try {
 
 Write-Host ""
 Write-Host "You can now create sites using the 'Create Site Only' command." -ForegroundColor Yellow
-Write-Host "Visit: https://quick-site-handbook.pages.dev/quick-site-handbook/command-generator"
+Write-Host "Visit: https://quick-site-handbook.pages.dev/command-generator"
 Write-Host ""
 Write-Host "⚠️  Note: You may need to restart PowerShell for all tools to be available." -ForegroundColor Magenta
 Write-Host ""

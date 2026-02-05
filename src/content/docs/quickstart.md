@@ -38,7 +38,7 @@ Before we start, you need two free accounts:
 
 ## Step 2: Get Your Command
 
-Go to the [**Command Generator**](/quick-site-handbook/command-generator) page to create your custom installation command.
+Go to the [**Command Generator**](/command-generator) page to create your custom installation command.
 
 You'll need to provide:
 - **Site name**: A name for your website (no spaces, lowercase recommended)
@@ -209,11 +209,11 @@ You've got the basics down! Here's what you can explore next:
 
 ### If you want to create more sites...
 
-Check out the [**Intermediate Guide**](/quick-site-handbook/intermediate) — it installs the tools globally so you can create unlimited sites without reinstalling everything.
+Check out the [**Intermediate Guide**](/intermediate) — it installs the tools globally so you can create unlimited sites without reinstalling everything.
 
 ### If you want to understand how it all works...
 
-Visit the [**Manual Guide**](/quick-site-handbook/manual) for resources on:
+Visit the [**Manual Guide**](/manual) for resources on:
 - How static websites work
 - Command line basics
 - Git fundamentals
@@ -233,7 +233,7 @@ Visit the [**Manual Guide**](/quick-site-handbook/manual) for resources on:
 
 If something didn't work:
 
-1. Check the [**Manual Guide**](/quick-site-handbook/manual) for detailed explanations
+1. Check the [**Manual Guide**](/manual) for detailed explanations
 2. Search for your error message online
 3. Check the [Hugo documentation](https://gohugo.io/documentation/)
 4. Ask in the [Hugo community forum](https://discourse.gohugo.io/)

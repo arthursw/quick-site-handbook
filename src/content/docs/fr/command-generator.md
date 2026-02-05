@@ -6,7 +6,7 @@ description: Générez des commandes personnalisées pour créer votre site Hugo
 Le Générateur de Commandes est un outil web qui crée la commande exacte dont vous avez besoin pour exécuter dans votre terminal ou PowerShell.
 
 :::tip[Ouvrir le Générateur]
-👉 [**Ouvrir le Générateur de Commandes**](/quick-site-handbook/fr/command-generator)
+👉 [**Ouvrir le Générateur de Commandes**](/command-generator)
 :::
 
 ---
@@ -37,7 +37,7 @@ Cette commande unique va :
 
 ### 2. Installer les Outils Seulement
 
-**Idéal pour** : Les utilisateurs suivant le [Guide Intermédiaire](/quick-site-handbook/fr/intermediate).
+**Idéal pour** : Les utilisateurs suivant le [Guide Intermédiaire](/fr/intermediate).
 
 Installe Pixi, Git et Hugo globalement pour que vous puissiez créer plusieurs sites.
 
@@ -104,7 +104,7 @@ Assurez-vous de sélectionner l'onglet correct avant de copier !
 Une fois votre site créé :
 
 1. **Téléchargez sur GitHub** en utilisant [GitHub Desktop](https://desktop.github.com/)
-2. **Déployez sur Cloudflare** en suivant le [guide de Démarrage Rapide](/quick-site-handbook/fr/quickstart#%C3%A9tape-5--d%C3%A9ployer-sur-cloudflare-pages)
+2. **Déployez sur Cloudflare** en suivant le [guide de Démarrage Rapide](/fr/quickstart#%C3%A9tape-5--d%C3%A9ployer-sur-cloudflare-pages)
 3. **Modifiez votre contenu** en utilisant l'éditeur en ligne de GitHub ou VS Code
 
 ---
@@ -135,4 +135,4 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## Note de Sécurité
 
-Ces scripts téléchargent et exécute du code depuis ce site web. Examinez toujours les scripts avant de les exécuter si vous n'êtes pas sûr. Les scripts sont open source et disponibles dans notre [dépôt GitHub](https://github.com/arthursw/quick-site-handbook/tree/main/public).
+Ces scripts téléchargent et exécute du code depuis ce site web. Examinez toujours les scripts avant de les exécuter si vous n'êtes pas sûr. Les scripts sont open source et disponibles dans notre [dépôt GitHub](https://github.com/arthursw/tree/main/public).

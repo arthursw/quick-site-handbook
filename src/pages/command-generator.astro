@@ -373,9 +373,9 @@ const description = 'Generate custom commands to create your Hugo website';
         const folderPath = document.getElementById('folder-path-ultimate').value || '/path/to/sites';
         
         if (currentPlatform === 'mac-linux') {
-          command = `curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/create-site.sh | bash -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
+          command = `curl -fsSL https://quick-site-handbook.pages.dev/create-site.sh | bash -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
         } else {
-          command = `irm https://quick-site-handbook.pages.dev/quick-site-handbook/create-site.ps1 | iex -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
+          command = `irm https://quick-site-handbook.pages.dev/create-site.ps1 | iex -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
         }
         
         description = `
@@ -393,9 +393,9 @@ const description = 'Generate custom commands to create your Hugo website';
         `;
       } else if (currentType === 'install-tools') {
         if (currentPlatform === 'mac-linux') {
-          command = 'curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/install-tools.sh | bash';
+          command = 'curl -fsSL https://quick-site-handbook.pages.dev/install-tools.sh | bash';
         } else {
-          command = 'irm https://quick-site-handbook.pages.dev/quick-site-handbook/install-tools.ps1 | iex';
+          command = 'irm https://quick-site-handbook.pages.dev/install-tools.ps1 | iex';
         }
         
         description = `
@@ -413,9 +413,9 @@ const description = 'Generate custom commands to create your Hugo website';
         const folderPath = document.getElementById('folder-path-new').value || '/path/to/sites';
         
         if (currentPlatform === 'mac-linux') {
-          command = `curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/new-site.sh | bash -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
+          command = `curl -fsSL https://quick-site-handbook.pages.dev/new-site.sh | bash -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
         } else {
-          command = `irm https://quick-site-handbook.pages.dev/quick-site-handbook/new-site.ps1 | iex -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
+          command = `irm https://quick-site-handbook.pages.dev/new-site.ps1 | iex -s -- -s ${siteName} -t ${themeUrl} -p "${folderPath}"`;
         }
         
         description = `

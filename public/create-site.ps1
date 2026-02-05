@@ -248,5 +248,5 @@ Write-Host ""
 Write-Host "To deploy:" -ForegroundColor Yellow
 Write-Host "   1. Upload to GitHub using GitHub Desktop"
 Write-Host "   2. Deploy to Cloudflare Pages"
-Write-Host "   See: https://quick-site-handbook.pages.dev/quick-site-handbook/quickstart"
+Write-Host "   See: https://quick-site-handbook.pages.dev/quickstart"
 Write-Host ""

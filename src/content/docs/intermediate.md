@@ -42,7 +42,7 @@ First, we'll install the three tools you'll need: **Pixi** (package manager), **
 Open Terminal and run:
 
 ```bash
-curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/install-tools.sh | bash
+curl -fsSL https://quick-site-handbook.pages.dev/install-tools.sh | bash
 ```
 
 ### Windows
@@ -50,7 +50,7 @@ curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/install-too
 Open PowerShell and run:
 
 ```powershell
-irm https://quick-site-handbook.pages.dev/quick-site-handbook/install-tools.ps1 | iex
+irm https://quick-site-handbook.pages.dev/install-tools.ps1 | iex
 ```
 
 :::details[What does this do?]
@@ -72,7 +72,7 @@ Now that tools are installed, creating a site is much faster.
 
 ### Generate Your Command
 
-Go to the [**Command Generator**](/quick-site-handbook/command-generator) and select:
+Go to the [**Command Generator**](/command-generator) and select:
 - **Tab**: "Create Site Only" (not "Ultimate Command")
 - Fill in your site name, theme URL, and folder path
 - Copy the command
@@ -82,13 +82,13 @@ Go to the [**Command Generator**](/quick-site-handbook/command-generator) and se
 **Mac / Linux** (Terminal):
 ```bash
 # Paste the command from the generator
-curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/new-site.sh | bash -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p /path/to/sites
+curl -fsSL https://quick-site-handbook.pages.dev/new-site.sh | bash -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p /path/to/sites
 ```
 
 **Windows** (PowerShell):
 ```powershell
 # Paste the command from the generator
-irm https://quick-site-handbook.pages.dev/quick-site-handbook/new-site.ps1 | iex -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p C:\path\to\sites
+irm https://quick-site-handbook.pages.dev/new-site.ps1 | iex -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p C:\path\to\sites
 ```
 
 :::details[What does this do?]
@@ -115,7 +115,7 @@ Follow the same steps as the Quickstart:
    - Select "Hugo" as the framework preset
    - Deploy!
 
-See the [Quickstart Steps 4-5](/quick-site-handbook/quickstart#step-4-upload-to-github) for detailed instructions.
+See the [Quickstart Steps 4-5](/quickstart#step-4-upload-to-github) for detailed instructions.
 
 ---
 
@@ -125,7 +125,7 @@ Now that tools are installed globally, creating more sites is simple:
 
 ### Using the Command Generator
 
-1. Go to the [**Command Generator**](/quick-site-handbook/command-generator)
+1. Go to the [**Command Generator**](/command-generator)
 2. Select "Create Site Only" tab
 3. Fill in new site name, theme, and folder
 4. Copy and run the command
@@ -258,5 +258,5 @@ hugo server -D
 
 - Learn more about [**Hugo**](https://gohugo.io/documentation/)
 - Explore [**Hugo themes**](https://themes.gohugo.io/)
-- Read the [**Manual Guide**](/quick-site-handbook/manual) for deeper understanding
+- Read the [**Manual Guide**](/manual) for deeper understanding
 - Join the [**Hugo community**](https://discourse.gohugo.io/)

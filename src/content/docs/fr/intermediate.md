@@ -42,7 +42,7 @@ D'abord, nous allons installer les trois outils dont vous aurez besoin : **Pixi*
 Ouvrez le Terminal et exécutez :
 
 ```bash
-curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/install-tools.sh | bash
+curl -fsSL https://quick-site-handbook.pages.dev/install-tools.sh | bash
 ```
 
 ### Windows
@@ -50,7 +50,7 @@ curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/install-too
 Ouvrez PowerShell et exécutez :
 
 ```powershell
-irm https://quick-site-handbook.pages.dev/quick-site-handbook/install-tools.ps1 | iex
+irm https://quick-site-handbook.pages.dev/install-tools.ps1 | iex
 ```
 
 :::details[Que fait ceci ?]
@@ -72,7 +72,7 @@ Maintenant que les outils sont installés, créer un site est beaucoup plus rapi
 
 ### Générez Votre Commande
 
-Allez sur le [**Générateur de Commandes**](/quick-site-handbook/fr/command-generator) et sélectionnez :
+Allez sur le [**Générateur de Commandes**](/command-generator) et sélectionnez :
 - **Onglet** : "Créer Site Seulement" (pas "Commande Ultime")
 - Remplissez le nom de votre site, l'URL du thème et le chemin du dossier
 - Copiez la commande
@@ -82,13 +82,13 @@ Allez sur le [**Générateur de Commandes**](/quick-site-handbook/fr/command-gen
 **Mac / Linux** (Terminal) :
 ```bash
 # Collez la commande du générateur
-curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/new-site.sh | bash -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p /chemin/vers/sites
+curl -fsSL https://quick-site-handbook.pages.dev/new-site.sh | bash -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p /chemin/vers/sites
 ```
 
 **Windows** (PowerShell) :
 ```powershell
 # Collez la commande du générateur
-irm https://quick-site-handbook.pages.dev/quick-site-handbook/new-site.ps1 | iex -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p C:\chemin\vers\sites
+irm https://quick-site-handbook.pages.dev/new-site.ps1 | iex -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p C:\chemin\vers\sites
 ```
 
 :::details[Que fait ceci ?]
@@ -115,7 +115,7 @@ Suivez les mêmes étapes que le Démarrage Rapide :
    - Sélectionnez "Hugo" comme préréglage de framework
    - Déployez !
 
-Consultez les [Étapes 4-5 du Démarrage Rapide](/quick-site-handbook/fr/quickstart#%C3%A9tape-4--t%C3%A9l%C3%A9charger-sur-github) pour des instructions détaillées.
+Consultez les [Étapes 4-5 du Démarrage Rapide](/fr/quickstart#%C3%A9tape-4--t%C3%A9l%C3%A9charger-sur-github) pour des instructions détaillées.
 
 ---
 
@@ -125,7 +125,7 @@ Maintenant que les outils sont installés globalement, créer d'autres sites est
 
 ### En Utilisant le Générateur de Commandes
 
-1. Allez sur le [**Générateur de Commandes**](/quick-site-handbook/fr/command-generator)
+1. Allez sur le [**Générateur de Commandes**](/command-generator)
 2. Sélectionnez l'onglet "Créer Site Seulement"
 3. Remplissez le nouveau nom de site, thème et dossier
 4. Copiez et exécutez la commande
@@ -258,5 +258,5 @@ hugo server -D
 
 - En savoir plus sur [**Hugo**](https://gohugo.io/documentation/)
 - Explorer les [**thèmes Hugo**](https://themes.gohugo.io/)
-- Lire le [**Guide Manuel**](/quick-site-handbook/fr/manual) pour une compréhension plus approfondie
+- Lire le [**Guide Manuel**](/fr/manual) pour une compréhension plus approfondie
 - Rejoindre la [**communauté Hugo**](https://discourse.gohugo.io/)
