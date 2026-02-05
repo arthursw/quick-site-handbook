@@ -59,13 +59,13 @@ echo "🔍 Checking prerequisites..."
 
 if ! command -v git &> /dev/null; then
     echo "❌ Git is not installed. Please run the install-tools.sh script first."
-    echo "   Visit: https://arthursw.github.io/quick-site-handbook/command-generator"
+    echo "   Visit: https://quick-site-handbook.pages.dev/quick-site-handbook/command-generator"
     exit 1
 fi
 
 if ! command -v hugo &> /dev/null; then
     echo "❌ Hugo is not installed. Please run the install-tools.sh script first."
-    echo "   Visit: https://arthursw.github.io/quick-site-handbook/command-generator"
+    echo "   Visit: https://quick-site-handbook.pages.dev/quick-site-handbook/command-generator"
     exit 1
 fi
 
@@ -126,7 +126,7 @@ echo "📝 Creating README.md..."
 cat > README.md << EOF
 # $SITE_NAME
 
-This is a Hugo website created with [Quick Site Handbook](https://arthursw.github.io/quick-site-handbook).
+This is a Hugo website created with [Quick Site Handbook](https://quick-site-handbook.pages.dev/quick-site-handbook).
 
 ## Development
 
@@ -212,7 +212,7 @@ Welcome to your new Hugo site!
 ## Resources
 
 - [Hugo Documentation](https://gohugo.io/documentation/)
-- [Quick Site Handbook](https://arthursw.github.io/quick-site-handbook)
+- [Quick Site Handbook](https://quick-site-handbook.pages.dev/quick-site-handbook)
 - [Theme Documentation]($THEME_URL)
 EOF
 
@@ -229,5 +229,5 @@ echo ""
 echo "To deploy:"
 echo "   1. Upload to GitHub using GitHub Desktop"
 echo "   2. Deploy to Cloudflare Pages"
-echo "   See: https://arthursw.github.io/quick-site-handbook/quickstart"
+echo "   See: https://quick-site-handbook.pages.dev/quick-site-handbook/quickstart"
 echo ""

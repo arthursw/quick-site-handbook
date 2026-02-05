@@ -136,7 +136,7 @@ Write-Host "📝 Creating README.md..." -ForegroundColor Yellow
 $readmeContent = @"
 # $SiteName
 
-This is a Hugo website created with [Quick Site Handbook](https://arthursw.github.io/quick-site-handbook).
+This is a Hugo website created with [Quick Site Handbook](https://quick-site-handbook.pages.dev/quick-site-handbook).
 
 ## Development
 
@@ -230,7 +230,7 @@ Welcome to your new Hugo site!
 ## Resources
 
 - [Hugo Documentation](https://gohugo.io/documentation/)
-- [Quick Site Handbook](https://arthursw.github.io/quick-site-handbook)
+- [Quick Site Handbook](https://quick-site-handbook.pages.dev/quick-site-handbook)
 - [Theme Documentation]($ThemeUrl)
 "@
 $helloContent | Out-File -FilePath "content\posts\hello.md" -Encoding UTF8
@@ -248,5 +248,5 @@ Write-Host ""
 Write-Host "To deploy:" -ForegroundColor Yellow
 Write-Host "   1. Upload to GitHub using GitHub Desktop"
 Write-Host "   2. Deploy to Cloudflare Pages"
-Write-Host "   See: https://arthursw.github.io/quick-site-handbook/quickstart"
+Write-Host "   See: https://quick-site-handbook.pages.dev/quick-site-handbook/quickstart"
 Write-Host ""

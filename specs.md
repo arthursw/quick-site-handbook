@@ -29,7 +29,7 @@ one script which:
 
 One webpage with inputs to generates the command line to enter in your terminal/powershell to use those scripts.
 
-The repo will be published on https://arthursw.github.io/quick-site-handbook so the command to run the scripts will look like `curl -fsSL https://arthursw.github.io/quick-site-handbook/create-site.sh | bash -s -- -s mysite -t ananke -p path/to/site/dir/`
+The repo will be published on https://quick-site-handbook.pages.dev/quick-site-handbook so the command to run the scripts will look like `curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/create-site.sh | bash -s -- -s mysite -t ananke -p path/to/site/dir/`
 
 The handbook must be for linux, mac and windows (powershell).
 
@@ -49,7 +49,7 @@ Choose your [Hugo theme](https://themes.gohugo.io/) and copy its github link (ex
 
 ## 2. Get your command
 
-Go to https://arthursw.github.io/quick-site-handbook/command_generator.html to generate your site in one command.
+Go to https://quick-site-handbook.pages.dev/quick-site-handbook/command_generator.html to generate your site in one command.
 Choose your settings (folder path, site, name) and copy the command (copy button).
 A helpbox which explains how to copy the folder path on the different platform.
 

@@ -42,7 +42,7 @@ First, we'll install the three tools you'll need: **Pixi** (package manager), **
 Open Terminal and run:
 
 ```bash
-curl -fsSL https://arthursw.github.io/quick-site-handbook/install-tools.sh | bash
+curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/install-tools.sh | bash
 ```
 
 ### Windows
@@ -50,7 +50,7 @@ curl -fsSL https://arthursw.github.io/quick-site-handbook/install-tools.sh | bas
 Open PowerShell and run:
 
 ```powershell
-irm https://arthursw.github.io/quick-site-handbook/install-tools.ps1 | iex
+irm https://quick-site-handbook.pages.dev/quick-site-handbook/install-tools.ps1 | iex
 ```
 
 :::details[What does this do?]
@@ -82,13 +82,13 @@ Go to the [**Command Generator**](/quick-site-handbook/command-generator) and se
 **Mac / Linux** (Terminal):
 ```bash
 # Paste the command from the generator
-curl -fsSL https://arthursw.github.io/quick-site-handbook/new-site.sh | bash -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p /path/to/sites
+curl -fsSL https://quick-site-handbook.pages.dev/quick-site-handbook/new-site.sh | bash -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p /path/to/sites
 ```
 
 **Windows** (PowerShell):
 ```powershell
 # Paste the command from the generator
-irm https://arthursw.github.io/quick-site-handbook/new-site.ps1 | iex -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p C:\path\to\sites
+irm https://quick-site-handbook.pages.dev/quick-site-handbook/new-site.ps1 | iex -s -- -s mysite -t https://github.com/theNewDynamic/gohugo-theme-ananke.git -p C:\path\to\sites
 ```
 
 :::details[What does this do?]
