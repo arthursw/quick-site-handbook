@@ -150,23 +150,37 @@ Now let's make your website live!
 
 Let's learn how to edit your website.
 
-### Edit with GitHub's Online Editor (Easiest)
+### Edit with GitHub.dev
+
+The easiest way to edit your site is using **github.dev** — a free online code editor that works directly with your repository.
 
 1. Go to your repository on GitHub
-2. Navigate to the `content/` folder (or where your theme stores content)
-3. Find the file you want to edit (usually `.md` files)
-4. Click the pencil icon (✏️) to edit
-5. Make your changes
-6. Scroll down and click "Commit changes..."
-7. Add a commit message (e.g., "Updated homepage")
-8. Click "Commit changes"
+2. Press the **period key (.)** on your keyboard
+   - This opens the github.dev editor in your browser
+3. The editor looks like a simplified [Visual Studio Code](https://code.visualstudio.com/) with a file explorer on the left
+4. Navigate to the `content/` folder (or where your theme stores content)
+5. Click on the file you want to edit (usually `.md` files)
+6. Make your changes in the editor
+7. Press **Cmd+S (Mac)** or **Ctrl+S (Windows/Linux)** to save
+8. Click the **Source Control** icon in the left sidebar (looks like a branch icon)
+9. Add a commit message (e.g., "Updated homepage")
+10. Click "Commit & Push"
 
 Cloudflare will automatically rebuild your site. Wait 1-2 minutes, then refresh your live site.
 
+:::tip[Quick edit on GitHub directly]
+You can also edit files directly on GitHub without github.dev:
+1. Go to your repository and find the file
+2. Click the pencil icon (✏️) to edit
+3. Make changes and click "Commit changes..."
+
+This works for quick fixes, but github.dev is more user-friendly for regular editing with its file explorer and better editing interface.
+:::
+
 ### Add a New Page
 
-1. In your repository, navigate to the content folder
-2. Click "Add file" → "Create new file"
+1. In github.dev (press `.` on your repository page), navigate to the content folder
+2. Right-click in the file explorer → "New File"
 3. Name it something like `my-new-page.md`
 4. Add this at the top:
    ```yaml
@@ -175,15 +189,17 @@ Cloudflare will automatically rebuild your site. Wait 1-2 minutes, then refresh 
    ---
    ```
 5. Write your content below in Markdown
-6. Commit the changes
+6. Save (Cmd+S / Ctrl+S)
+7. Commit your changes via the Source Control panel
 
 ### Add Images
 
-1. In your repository, go to the `static/` or `assets/` folder
-2. Click "Upload files"
-3. Drag and drop your images
-4. Commit the changes
-5. Reference images in your content using `![Alt text](image-name.jpg)`
+1. First, upload images using GitHub's web interface:
+   - Go to your repository on GitHub (not github.dev)
+   - Navigate to the `static/` or `assets/` folder
+   - Click "Add file" → "Upload files"
+   - Drag and drop your images and commit
+2. Reference images in your content using `![Alt text](image-name.jpg)`
 
 ---
 
